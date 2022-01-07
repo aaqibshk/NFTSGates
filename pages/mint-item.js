@@ -91,7 +91,7 @@ export default function MintItem() {
 
         <input type="file" className="mt-4" name="Asset" onChange={onChange} />
 
-        {fileUrl && (<Image className="rounded mt-4" width="350px" src={fileUrl} />)}
+        {fileUrl && (<Image alt="image" className="rounded mt-4" width="350px" src={fileUrl} />)}
 
         <button onClick={createMarket} className="font-bold mt-4 bg-green-900 text-white rounded p-4 shadow-lg">Mint NFT</button>
 

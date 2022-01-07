@@ -50,7 +50,7 @@ export default function MyAssets() {
 
 
   if(loadingState === 'loaded' && !nfts.length) return (
-    <h1 className="px-20 py-7 text-4xl">You don't own any NFTS currently :(</h1>
+    <h1 className="px-20 py-7 text-4xl">You dont own any NFTS currently :(</h1>
   ) 
 
   return (
@@ -60,7 +60,7 @@ export default function MyAssets() {
           {
             nfts.map((nft, i) => (
               <div key={i} className="border shadow rounded-xl overflow-hidden">
-                <Image src={nft.image} />
+                <Image alt="image" src={nft.image} />
                 <div className="p-4">
                   <p style={{height: '64px'}} className="text-3xl font-semibold">
                     {nft.name}

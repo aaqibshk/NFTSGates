@@ -64,7 +64,7 @@ export default function AccountDashBoard() {
           {
             nfts.map((nft, i) => (
               <div key={i} className="border shadow rounded-xl overflow-hidden">
-                <Image src={nft.image} />
+                <Image src={nft.image} alt="image" />
                 <div className="p-4">
                   <p style={{height: '64px'}} className="text-3xl font-semibold">
                     {nft.name}
