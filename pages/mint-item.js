@@ -3,6 +3,8 @@ import {useEffect, useState} from 'react'
 import { useRouter } from 'next/router'
 import Web3Modal from 'web3modal'
 import { create as ipfsHttpClient } from 'ipfs-http-client'
+import Image from 'next/image';
+
 
 import { nftaddress, nftmarketaddress } from '../config'
 import NFT from '../artifacts/contracts/NFT.sol/NFT.json'
@@ -89,7 +91,7 @@ export default function MintItem() {
 
         <input type="file" className="mt-4" name="Asset" onChange={onChange} />
 
-        {fileUrl && (<img className="rounded mt-4" width="350px" src={fileUrl} />)}
+        {fileUrl && (<Image className="rounded mt-4" width="350px" src={fileUrl} />)}
 
         <button onClick={createMarket} className="font-bold mt-4 bg-green-900 text-white rounded p-4 shadow-lg">Mint NFT</button>
 

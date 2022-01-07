@@ -2,6 +2,8 @@ import {ethers} from 'ethers'
 import {useEffect, useState} from 'react'
 import axios from 'axios'
 import Web3Modal from 'web3modal'
+import Image from 'next/image';
+
 
 import { nftaddress, nftmarketaddress } from '../config'
 import NFT from '../artifacts/contracts/NFT.sol/NFT.json'
@@ -58,7 +60,7 @@ export default function MyAssets() {
           {
             nfts.map((nft, i) => (
               <div key={i} className="border shadow rounded-xl overflow-hidden">
-                <img src={nft.image} />
+                <Image src={nft.image} />
                 <div className="p-4">
                   <p style={{height: '64px'}} className="text-3xl font-semibold">
                     {nft.name}
